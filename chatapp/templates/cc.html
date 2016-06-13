@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Multiple Modals With Semantic UI</title>
+	<link rel="stylesheet" href="../static/semantic/dist/semantic.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="../static/semantic/dist/semantic.js"></script>
+</head>
+<body>
+
+<div class="ui united modal" id="modal1">
+	<div class="header">Modal 1</div>
+	<div class="content">Some info will go here...</div>
+	<div class="actions">
+		<div class="ui blue labeled icon button" id="btn-modal-1"><i class="arrow sign left icon"></i>Close me and Call modal 2</div>
+	</div>
+</div>
+
+<div class="ui united fullscreen modal" id="modal2">
+ <div class="header"> Modal 2 </div>
+ <div class="content">If you want to close previous modals before show the next modal, you should disable the parameter <b>'allowMultiple'</b>.  </div>
+ <div class="actions">
+  	<div class="ui red labeled icon button" id="btn-modal-2"><i class="arrow sign left icon"></i>Close me and Call modal 3</div>
+ </div>
+</div>
+
+
+<div class="ui united small modal" id="modal3">
+ <div class="header"> Modal 3 </div>
+ <div class="content"> Hello World </div>
+ <div class="actions">
+  <div class="ui blue labeled icon button" id="btn-modal-3"> <i class="checkmark icon"></i> Close All and Finish. </div> </div>
+</div>
+
+<!-- Bored Modal -->
+<div class="ui small modal" id="modal4">
+ <div class="header"> Don't talk with me! </div>
+ <div class="content"> :'( darkness my only old friend... <br> I don't have the class <b>.united</b></div>
+ <div class="actions"><div class="ui secondary button"> Close me! </div></div>
+</div>
+
+<center style="padding: 30px;">
+	<button data-modal="modal1" id="call-modals" class="ui green button">Call Modal 1, 2 and 3</button>
+	<button data-modal="modal2" id="call-modal-2" class="ui red button">Call Modal 2 and 3 after it</button>
+	<button data-modal="modal3" id="call-modal-3" class="ui orange button">Call Modal 3 only</button>
+	<button data-modal="modal4" id="call-modal-4" class="ui secondary button">Call Bored Modal Alone in the dark</button>
+</center>
+
+<script>
+//Multiple Modals
+// all first 3 modals will be called and showed but 'BORED MODAL' won't. Only when you click on the last button
+// .united is a custom class and you can use anything.
+$('.united.modal').modal({
+	// this parameter will enable/disable the closing for the previous .united modals when the next will be opened :)
+	allowMultiple: true,
+});
+// attach events
+// haven't attached events over button of modal 3
+$('#modal1').modal('attach events', '#call-modals');
+$('#modal2').modal('attach events', '#btn-modal-1');
+$('#modal3').modal('attach events', '#btn-modal-2');
+// disable the comment bellow to call the modal 4 after click on button into modal 3
+//$('#modal4').modal('attach events', '#btn-modal-3');
+// Individual events - unecessary but i does it.
+$('center .button').on('click', function(){
+	// using the attribute data-modal to identify for what modal the button references
+	modal = $(this).attr('data-modal');
+	// creating the individual event attached to click over button
+	$('#'+modal+'.modal').modal(
+		'show'
+	);
+});
+</script>
+
+</body>
+</html>

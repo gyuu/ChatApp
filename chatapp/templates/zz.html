@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+    <title>Flask-SocketIO Test</title>
+
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.6/socket.io.min.js"></script>
+
+	<script type="text/javascript">
+	 	$(document).ready(function() {
+
+	        namespace = '/chat';
+	        var socket = io.connect('http://localhost:8000' + namespace);
+
+	        socket.on('conn_ack', function(msg) {
+	        	console.log('connect:');
+	        	console.log(msg);
+	        });
+
+	        socket.on('login_ack', function(msg) {
+	        	console.log('login:');
+	        	console.log(msg);
+	        });
+
+	        socket.on('offline-msg-ack', function(msg){
+	        	console.log('offline message:');
+	        	console.log(msg);
+	        });
+
+	        socket.on('message', function(data){
+	        	console.log('accpet message from server:');
+	        	console.log(data);
+	        });
+
+	        var token_global;
+
+	        $('#account-login').click(function() {
+	        	var phone = $('#phone').val();
+	        	var passwd = $('#password').val();
+				$.ajax({
+		            type: "POST",
+		            url: "/auth/login",
+		            data: JSON.stringify({
+		            	'phone_number' : phone,
+		            	'password' : passwd
+		            }), 
+		            contentType: "application/json; charset=utf-8",
+		            dataType: "json",
+		            success: function (res) {
+		               console.log(res);
+		               $('#token').text(res.data.token);
+		               $('#uid').text(res.data.uid);
+		               token_global = res.data.token;
+		            },
+		            error: function (errormessage) {
+		            	console.log(msg);
+		            }
+            	});
+	        });
+
+	        $('#login').click(function() {
+	        	var token = $('#token').text();
+	        	socket.emit('login', {'token': token});
+	        });
+
+	        $('#offline-msg').click(function() {
+	        	var token = $('#token').text();
+	        	socket.emit('offline-msg', {'token':token});
+	        });
+
+	        $('#offline-msg-read').click(function() {
+	        	var token = $('#token').text();
+	        	socket.emit('offline-msg-read', {'token':token});
+	        });
+
+	        $('#send').click(function(){
+	        	var token = $('#token').text();
+	        	var message = $('#message').val();
+	        	var to_user_id = $('#to_user_id').val();
+	        	socket.emit('send', {'token':token, 'to_user_id':to_user_id, 'content':message});
+	        });
+
+	 	});
+	</script>
+
+</head>
+<body>
+	<h1> 你说这不是智障吗各位 </h1>
+
+	<input type="text" id="phone" name="phone" />
+	<input type="password" id="password" name="phone" />
+	<button id="account-login">account login</button>
+	<button id="login">chat-login</button>
+	<button id="offline-msg">offline message</button>
+	<button id="offline-msg-read">offline msg read</button>
+	<input type="text" id="message" />
+	<input type="text" id="to_user_id" />
+	<button id="send">send message</button>
+	<br>
+	<div id="token"></div>
+	<br>
+	<div id="uid"></div>
+
+</body>
+</html>

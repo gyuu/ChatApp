@@ -1,0 +1,23 @@
+body {
+	background-color: #eee;
+}
+
+.login-page {
+	position: relative;
+	top:30%;
+	margin-top: auto;
+	margin-bottom: auto;
+	height: 30%;
+}
+
+div#register-form {
+	top :25%;
+	display: none;
+}
+
+div#chat-page {
+	display: none;
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+}

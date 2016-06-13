@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FUCK U</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="static/semantic/dist/semantic.css" />
+	<link rel="stylesheet" type="text/css" href="static/css/index.css">	
+	<link rel="stylesheet" type="text/css" href="static/css/chat.css">
+	<!-- libs -->
+	<script src="static/js/jquery-2.2.0.min.js"></script>
+	<script src="static/semantic/dist/semantic.min.js"></script>
+	<script src="static/js/json2html.js"></script>
+	<script src="static/js/jquery.json2html.js"></script>
+	<!-- my code -->
+	<script src="static/js/index.js"></script>
+	<script src="static/js/chat.js"></script>
+</head>
+<body>
+
+
+<!-- login or register form begins -->
+
+	<div id="login-form" class="ui two column middle aligned stackable very relaxed grid text container login-page">
+
+	      <div class="column">
+	        <div class="ui form">
+	          <div class="field">
+	            <label>Username</label> 
+	            <div class="ui left icon input">
+	              <input id="login-username" type="text" placeholder="Username">
+	              <i class="user icon"></i>
+	            </div>
+	          </div>
+
+	          <div class="field">
+	            <label>Password</label>
+	            <div class="ui left icon input">
+	              <input id="login-passwd" type="password" placeholder="Password">
+	              <i class="lock icon"></i>
+	            </div>
+	          </div>
+
+	          <div class="field">
+			    <div class="ui toggle checkbox">
+			      <input type="checkbox" tabindex="0" class="hidden">
+			      <label>Remember Me</label>
+			    </div>
+	          </div>
+
+	          <div id="login-submit" class="ui blue submit button">Login</div>
+	        </div>
+	      </div>
+
+	      <div class="ui vertical divider">
+	        Or
+	      </div>
+
+	      <div class="center aligned column">
+	        <div id="signup-button" class="ui big green labeled icon button">
+	          <i class="signup icon"></i>
+	          Sign Up
+	        </div>
+	      </div>
+
+    </div>
+
+<!-- login or register form ends -->
+
+<!--  register form begins -->
+
+	<div id="register-form" class="ui middle aligned center aligned grid container login-page">
+
+	  <div class="six wide column">
+
+	    <h2 class="ui teal image header">
+	      <img src="static/img/fuck.jpg" class="image">
+	      <div class="content">
+	        Sign up to FUCK U
+	      </div>
+	    </h2>
+
+	    <form class="ui large form">
+	      <div class="ui raised segment">
+
+			<div class="field">
+			<div class="ui left icon input">
+			  <input id="signup-username" type="text" placeholder="Username">
+			  <i class="user icon"></i>
+			</div>
+			</div>
+
+	        <div class="field">
+	          <div class="ui left icon input">
+	            <i class="user icon"></i>
+	            <input id="signup-email" type="text" name="email" placeholder="E-mail address">
+	          </div>
+	        </div>
+
+	        <div class="field">
+	          <div class="ui left icon input">
+	            <i class="lock icon"></i>
+	            <input id="signup-passwd" type="password" name="password" placeholder="Password">
+	          </div>
+	        </div>
+	        <div id="signup-submit" class="ui fluid large teal submit button">Sign Up</div>
+	      
+	      	<div class="ui divider"></div>
+
+			<div id="signup-back" class="ui compact button">Back</div>
+
+	      </div>
+
+	    </form>
+
+	  </div>
+	</div>
+
+<!--  register form ends -->
+
+
+<!-- chat page begins -->
+
+<div id="chat-page" class="ui centered grid holder">
+
+	<!-- user panel begins -->
+
+	<div id="user-panel" class="three wide computer sixteen wide mobile column" style="overflow-x:hidden;overflow-y:hidden;white-space:nowrap;">
+
+		<!-- user profile begins -->
+
+		<div id="user-profile" class="ui center aligned icon header">
+		  <img id="user-avatar" class="ui tiny circular image" src="static/img/fuck.jpg" />
+		  <div class="content" style="padding-left:0;">
+		  	<h3 id="username" class="ui grey inverted header">LagrangeGi</h3>
+		  </div>
+		</div>
+
+		<!-- user profile ends -->
+
+		<!-- user menu begins -->
+
+		<div id="computer-menu" class="ui computer only grid">
+
+			<div id="user-menu" class="ui two item secondary inverted labeled icon menu">
+			  <a class="item message-button">
+			    <i id="computer-message-button" class="comments icon "></i>
+			    Message
+			  </a>
+			  <a class="item friend-button">
+			    <i id="computer-friend-button" class="users icon "></i>
+			    Friend
+			  </a>
+			</div>
+
+		</div>
+
+		<div id="mobile-menu" class="ui two column mobile only tablet only grid container">
+
+			<div class="center aligned column">
+				<button id="mobile-message-button" class="ui inverted basic button message-button mobile-btn" style="font-size:3rem;">
+				  Message
+				</button>
+			</div>
+			<div class="center aligned column">
+				<button id="mobile-friend-button" class="ui inverted basic blue button friend-button mobile-btn" style="font-size:3rem;">
+				  Friends
+				</button>
+			</div>
+
+		</div>
+
+		<!-- user menu ends -->
+
+		<div class="ui inverted divider"></div>
+
+		<!-- user friend group list begins -->
+
+		  <div id="friend-group-list" class="ui inverted middle aligned list mylist">
+
+		  </div>
+
+
+		<!-- user friend group list ends -->
+
+		<!-- user message list begins -->
+
+	  	<div id="message-list" class="ui animated massive middle aligned inverted selection list mylist">
+
+		  <div class="item message-item">
+		    <img class="ui avatar image" src="static/img/fuck.jpg">
+		    <div class="content">
+		      你爸爸
+		    </div>
+		  </div>
+
+		  <div class="item message-item">
+		    <img class="ui avatar image" src="static/img/remu.jpg">
+		    <div class="content">
+		      博丽灵梦
+		    </div>
+		  </div>
+
+		  <div class="item message-item">
+		    <img class="ui avatar image" src="static/img/koko.jpg">
+		    <div class="content">
+		      泉此方
+		    </div>
+		  </div>
+
+	  	</div>
+
+		<!-- user message list ends -->
+
+	</div>
+
+	<!-- user panel ends -->
+
+
+	<!-- chat panel begins -->
+
+
+		<div id="chat-panel" class="seven wide computer sixteen wide mobile column computer only">
+
+			<!-- message area begins -->
+
+			<div id="message-area" class="ui container">
+
+				<div class="ui stacked grid fluid container left-message chat-message-item">
+
+					<div class=" middle aligned two wide computer three wide mobile column">
+
+						<img class="ui tiny circular image chat-avatar" src="static/img/remu.jpg">
+
+					</div>
+
+					<div class="left floated middle aligned ten wide column">
+
+						<div class="ui raised compact segment">
+						  <p>我是你爹！</p>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="ui stacked grid fluid container right-message chat-message-item">
+
+					<div class="right floated middle aligned ten wide column">
+
+						<div class="right floated ui raised compact right aligned segment">
+						  <p>嘻嘻，我是你爷爷的爹</p>
+						</div>
+
+					</div>
+
+					<div class="middle aligned two wide computer three wide mobile column">
+
+						<img class="ui tiny circular image chat-avatar" src="static/img/remu.jpg">
+
+					</div>
+
+				</div>
+
+
+			</div>
+
+			<!-- message area ends -->
+
+			<div class="ui divider"></div>
+
+			<!-- message input begins -->
+
+			<div id="input-area">
+
+				<div class="ui form">
+				  <div class="field">
+				    <textarea id="message-input" rows="3" placeholder="Input text here..."></textarea>
+				  </div>
+				</div>
+
+		        <!-- <div id="send-button" class="ui right floated blue submit button">Send</div> -->
+
+			</div>
+
+
+			<!-- message input ends -->
+			
+		</div>
+
+
+	<!-- chat panel ends -->
+
+</div>
+
+<!-- chat page ends -->
+
+<!-- modal begins -->
+
+<!-- add friend modal begins -->
+<div id="add-friend-modal" class="ui tiny modal">
+    <div class="ui icon header">
+      <i class="add user icon"></i>
+      Add Friend
+    </div>
+    <div class="content">
+
+		<div class="ui form">
+
+			<div id="add-friend-find-user-field" class="inline fields">
+
+				<div class="ten wide field" style="width:100%;margin:0 auto;">
+					<input id="search-username" type="text" placeholder="Username">
+				</div>
+
+				<button id="search-friend-button" class="ui primary button">
+				  Search
+				</button>
+
+			</div>
+
+			<div id="add-friend-found-user" class="inline fields" style="display:none">
+
+			  <div class="field" style="margin:0 auto;">
+				    <img class="ui avatar image" id="found-avatar" src="#" />
+				    <span id="found-username"></span>
+			  </div>
+
+			</div>
+
+		  	<div class="ui divider"></div>
+
+			<div class="inline fields">
+				<div class="twelve wide field" style="width:100%;margin:0 auto;">
+					<select id="group-dropdown" class="ui dropdown">
+						<option value="0">Select Group</option>
+					</select>
+					<button id="select-group-submit" class="ui icon button">
+						<i class="ui checkmark icon"></i>
+					</button>
+				</div>
+			</div>
+
+			<div id="add-group-field" class="inline fields">
+				<div class="twelve wide field" style="width:100%;margin:0 auto;" >
+				  	<input id="add-group-name" type="text" placeholder="Group Name">
+					<button id="add-group-submit" class="ui icon button">
+						<i class="ui plus icon"></i>
+					</button>
+				</div>
+			</div>
+
+			<div class="ui divider"></div>
+
+			  <div class="actions">
+			    <div class="two fluid ui inverted buttons">
+			      <div id="add-friend-cancel" class="ui deny button">
+			        <i class="remove icon"></i>
+			        Cancel
+			      </div>
+			      <div id="add-friend-submit" class="ui green button">
+			        <i class="checkmark icon"></i>
+			        Add
+			      </div>
+			    </div>
+			  </div>
+
+		</div>
+
+    </div>
+
+</div>
+<!-- add friend modal ends -->
+
+<!-- delete friend modal begins -->
+<div id="delete-friend-modal" class="ui tiny modal">
+    <div class="ui icon header">
+      <i class="remove user icon"></i>
+      Delete Friend?
+    </div>
+	<div class="actions">
+	    <div class="ui right deny center aligned button">
+	      Cancel
+	    </div>
+	    <div id="delete-friend-submit" class="ui red ok right center aligned button">
+	      Delete
+	    </div>
+	</div>
+
+  </div>
+<!-- delete friend modal ends -->
+
+<!-- modal ends -->
+
+
+<script type="text/javascript">
+
+// 右键 friend 按钮可以打开加好友页面。
+$('.friend-button').mousedown(function(event) {
+
+	document.oncontextmenu = function() {return false;};
+    switch (event.which) {
+        case 3:
+			$('#add-friend-modal')
+			.modal({
+				closable  : false,
+				onDeny    : function() {
+					$(this).modal('hide');
+					$('#add-friend-find-user-field').fadeIn();
+					$('#add-friend-found-user').fadeOut();
+					$('#add-group-field').fadeIn();
+					return false;
+				}
+			})
+			.modal('show');
+            break;
+        default:
+    }
+});
+
+
+// 加好友时查找用户。
+$('#search-friend-button').click(function() {
+	var username = $('#search-username').val();
+	var payload = {
+		'username' : username
+	};
+	authorized_post('/user/find', payload, function(res) {
+		if(!res.isSuccess)
+			alert('user not found');
+		else {
+			// 找到用户之后用用户资料代替查找用户的输入框。
+			$('#add-friend-find-user-field').fadeOut(function() {
+				var found_user = $('#add-friend-found-user').find('div.field');
+				found_user.find('img').attr('src', res.data.avatar);
+				found_user.find('span').text(res.data.username);
+				$('#add-friend-found-user').attr('data-uid', res.data.id).fadeIn();
+				});
+			}
+	});
+});
+
+
+// 选择完组之后添加按钮消失。
+$('#select-group-submit').click(function() {
+	var group_id = $('#group-dropdown option:selected').val();
+	if (group_id !== '0')
+		$('#add-group-field').fadeOut();
+	else {
+		alert('please select a group!');
+	}
+});
+
+
+// 添加组。
+$('#add-group-submit').click(function() {
+	var group_name = $('#add-group-name').val();
+	var payload = {
+		'group_name' : group_name
+	}
+	authorized_post('/user/add-group', payload, function(res) {
+		if (!res.isSuccess)
+			console.log(res.error_message);
+		else {
+			console.log(res);
+			// 将组添加到下拉列表中。
+			payload['gid'] = res.data.gid;
+			var option = strrep(group_dropdown_template, payload);
+			$('#group-dropdown').append(option);
+			$('#add-group-field').fadeOut();
+
+			// 将组加到 panel 中。
+			var group_header = strrep(group_header_template, payload);
+			var group_block = group_header + group_footer;
+			$('#friend-group-list').hide().append(group_block).fadeIn();
+		}
+	});
+});
+
+
+// 加好友
+$('#add-friend-submit').click(function() {
+
+	var user_id = $('#add-friend-found-user').attr('data-uid');
+	var group_id = $('#group-dropdown option:selected').val();
+
+	if (user_id && group_id !== '0') {
+		var payload = {
+			'friend_id' : user_id,
+			'group_id': group_id
+		};
+		authorized_post('/user/add-friend', payload, function(res) {
+			if (!res.isSuccess)
+				console.log(res.error_message);
+			else {
+				console.log(res.data);
+				// 将用户添加到左侧的好友列表中。
+				var found_user = $('#add-friend-found-user').find('div.field');
+				var friend_item_data = {
+					'id': user_id,
+					'username': found_user.find('span').text(),
+					'avatar': found_user.find('img').attr('src')
+				}
+				var friend_item = json2html.transform(friend_item_data, friend_item_template);
+				$('#friend-group-list').find('div.g' + group_id).find('.list').append(friend_item);
+
+				// 恢复 modal 框中的内容。
+				$('#add-friend-find-user-field').fadeIn();
+				$('#add-friend-found-user').fadeOut();
+				$('#add-group-field').fadeIn();
+				$('#add-friend-modal').modal('hide');
+			}
+		});
+
+	}
+	else if (group_id === '0') {
+		alert('please select a group!');
+	}
+});
+
+
+// 在朋友列表项上右键可以激活删除好友的按钮。
+$('#friend-group-list').on('mousedown', '.friend-item', function(){
+	document.oncontextmenu = function() {return false;};
+
+	// 获取用户 id 和组 id。
+	var friend_id = parseInt($(this).attr('data-uid'));
+	var gid_pat = /g\d+/;
+	var class_list = $(this).parents('.friend-group').attr('class');
+	var gid = parseInt(class_list.match(gid_pat)[0].substring(1));
+	var selected_friend = this;
+
+    switch (event.which) {
+        case 3:
+        	$('#delete-friend-modal')
+        	.modal({
+        		onApprove : function() {
+        			// 调用删除好友的接口。
+        			var payload = {
+        				'friend_id' : friend_id,
+        				'group_id' : gid
+        			}
+        			authorized_post('/user/delete-friend', payload, function(res) {
+        				if (!res.isSuccess)
+        					console.log(res.error_message);
+        				else {
+        					console.log(res.data);
+        					// 将选中的好友从好友列表中删除。
+        					$(selected_friend).fadeOut();
+        				}
+        			$('#delete-friend-modal').modal('hide');
+        			});
+        		}
+        	})
+        	.modal('show');
+            break;
+        default:
+    }
+});
+</script>
+
+</body>
+</html>

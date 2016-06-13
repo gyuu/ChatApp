@@ -1,0 +1,146 @@
+.holder {
+	position: relative;
+	height: 90%;
+	min-height: 700px;
+}
+
+div#user-panel {
+	background-color: #2e3238;
+	height: 100%;
+	overflow-x:hidden;
+	overflow-y:hidden;
+	white-space:nowrap;
+}
+
+div#user-profile {
+	margin-top: 5%;
+	max-height: 15%;
+}
+
+div#user-menu {
+	height: 10%;
+	margin-top: 2%;
+}
+
+div#chat-panel {
+	background-color: #fff;
+}
+
+img#user-avatar {
+	width: 80px;
+	height: 80px;
+}
+
+h3#username {
+	margin-top: 2%;
+}
+
+.mylist {
+	overflow: scroll;
+	height: 70%;
+	max-height: 70%;
+	margin-left: 10% !important;
+}
+
+div#message-list {
+	display: none;
+}
+
+div#chat-panel {
+	height: 100%;
+}
+
+div#message-area {
+	height: 85%;
+	overflow: scroll;
+}
+
+div#input-area {
+	margin-top: 2%;
+	height: 15%;
+}
+
+textarea#message-input {
+	border: none;
+}
+
+div#send-button {
+	margin-top: 1%;
+}
+
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+
+	img#user-avatar {
+		width: 15rem;
+		height: 15rem;
+	}
+
+	h3#username {
+		font-size: 4rem;
+	}
+
+	.ui {
+		font-size: 3rem;
+	}
+
+	.holder {
+		top :0;
+		height: 100% !important;
+		bottom: 0 !important;
+	}
+
+	.mylist {
+		margin-left: 10% !important;
+	}
+
+	div#mobile-menu {
+		margin-top: 10%;
+		margin-bottom: 5%;
+	}
+
+	div#message-area {
+		width: 100%;
+		height: 90%;
+	}
+
+}
+
+/* Tiny Modal Width */
+
+@media only screen and (max-width: 767px) {
+  .ui.tiny.modal {
+    width: 95%;
+    margin: 0em 0em 0em -47.5%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .ui.tiny.modal {
+    width: 50%;
+    margin: 0em 0em 0em -25%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .ui.tiny.modal {
+    width: 200px;
+    margin: 0em 0em 0em -100px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .ui.tiny.modal {
+    width: 300px;
+    margin: 0em 0em 0em -150px;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .ui.tiny.modal {
+    width: 400px;
+    margin: 0em 0em 0em -200px;
+  }
+}
+
+/*add friend modal style*/

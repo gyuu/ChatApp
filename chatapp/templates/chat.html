@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FUCK U</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="static/semantic/dist/semantic.css" />
+	<link rel="stylesheet" type="text/css" href="static/css/chat.css">
+	<script src="static/js/jquery-2.2.0.min.js"></script>
+	<script src="static/semantic/dist/semantic.min.js"></script>
+</head>
+<body>
+
+<div class="ui centered grid holder">
+
+	<!-- user panel begins -->
+
+	<div id="user-panel" class="three wide computer sixteen wide mobile column" style="overflow-x:hidden;overflow-y:hidden;white-space:nowrap;">
+
+		<!-- user profile begins -->
+
+		<div id="user-profile" class="ui center aligned icon header">
+		  <img id="user-avatar" class="ui tiny circular image" src="static/img/fuck.jpg" />
+		  <div class="content" style="padding-left:0;">
+		  	<h3 id="username" class="ui grey inverted header">LagrangeGi</h3>
+		  </div>
+		</div>
+
+		<!-- user profile ends -->
+
+		<!-- user menu begins -->
+
+		<div id="computer-menu" class="ui computer only grid">
+
+			<div id="user-menu" class="ui two item secondary inverted labeled icon menu">
+			  <a class="item message-button">
+			    <i id="computer-message-button" class="comments icon "></i>
+			    Message
+			  </a>
+			  <a class="item friend-button">
+			    <i id="computer-friend-button" class="users icon "></i>
+			    Friend
+			  </a>
+			</div>
+
+		</div>
+
+		<div id="mobile-menu" class="ui two column mobile only tablet only grid container">
+
+			<div class="center aligned column">
+				<button id="mobile-message-button" class="ui inverted basic button message-button mobile-btn" style="font-size:3rem;">
+				  Message
+				</button>
+			</div>
+			<div class="center aligned column">
+				<button id="mobile-friend-button" class="ui inverted basic blue button friend-button mobile-btn" style="font-size:3rem;">
+				  Friends
+				</button>
+			</div>
+
+		</div>
+
+		<!-- user menu ends -->
+
+		<div class="ui inverted divider"></div>
+
+		<!-- user friend group list begins -->
+
+		  <div id="friend-group-list" class="ui inverted middle aligned list mylist">
+
+
+			  <div class="item friend-group">
+
+				  <div class="ui header">
+				  	<i class="chevron circle right icon"></i>
+				  	<div class="content">老婆组</div>
+				  </div>
+
+				  <div class="content">
+				  	<div class="ui animated big middle aligned inverted selection list">
+
+					  <div class="item friend-item">
+					    <img class="ui avatar image" src="static/img/fuck.jpg">
+					    <div class="content">
+					      你爸爸的爸爸
+					    </div>
+					  </div>
+
+					  <div class="item friend-item">
+					    <img class="ui avatar image" src="static/img/remu.jpg">
+					    <div class="content">
+					      博丽灵梦
+					    </div>
+					  </div>
+
+					  <div class="item friend-item">
+					    <img class="ui avatar image" src="static/img/koko.jpg">
+					    <div class="content">
+					      泉此方
+					    </div>
+					  </div>
+
+				  	</div>
+				  </div>
+
+			  </div>
+
+		  </div>
+
+
+		<!-- user friend group list ends -->
+
+		<!-- user message list begins -->
+
+	  	<div id="message-list" class="ui animated massive middle aligned inverted selection list mylist">
+
+		  <div class="item message-item">
+		    <img class="ui avatar image" src="static/img/fuck.jpg">
+		    <div class="content">
+		      你爸爸
+		    </div>
+		  </div>
+
+		  <div class="item message-item">
+		    <img class="ui avatar image" src="static/img/remu.jpg">
+		    <div class="content">
+		      博丽灵梦
+		    </div>
+		  </div>
+
+		  <div class="item message-item">
+		    <img class="ui avatar image" src="static/img/koko.jpg">
+		    <div class="content">
+		      泉此方
+		    </div>
+		  </div>
+
+	  	</div>
+
+		<!-- user message list ends -->
+
+	</div>
+
+	<!-- user panel ends -->
+
+
+	<!-- chat panel begins -->
+
+
+		<div id="chat-panel" class="seven wide computer sixteen wide mobile column computer only">
+
+			<!-- message area begins -->
+
+			<div id="message-area" class="ui container">
+
+				<div class="ui stacked grid fluid container left-message chat-message-item">
+
+					<div class=" middle aligned two wide computer three wide mobile column">
+
+						<img class="ui tiny circular image chat-avatar" src="static/img/remu.jpg">
+
+					</div>
+
+					<div class="left floated middle aligned ten wide column">
+
+						<div class="ui raised compact segment">
+						  <p>我是你爹！</p>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="ui stacked grid fluid container right-message chat-message-item">
+
+					<div class="right floated middle aligned ten wide column">
+
+						<div class="right floated ui raised compact right aligned segment">
+						  <p>嘻嘻，我是你爷爷的爹</p>
+						</div>
+
+					</div>
+
+					<div class="middle aligned two wide computer three wide mobile column">
+
+						<img class="ui tiny circular image chat-avatar" src="static/img/remu.jpg">
+
+					</div>
+
+				</div>
+
+
+			</div>
+
+			<!-- message area ends -->
+
+			<div class="ui divider"></div>
+
+			<!-- message input begins -->
+
+			<div id="input-area">
+
+				<div class="ui form">
+				  <div class="field">
+				    <textarea id="message-input" rows="3" placeholder="Input text here..."></textarea>
+				  </div>
+				</div>
+
+		        <!-- <div id="send-button" class="ui right floated blue submit button">Send</div> -->
+
+			</div>
+
+
+			<!-- message input ends -->
+			
+		</div>
+
+
+	<!-- chat panel ends -->
+
+</div>
+
+
+<script>
+
+	function updateChatPanel() {
+		$('#chat-panel').removeClass('computer only');
+		$('#message-area').css('margin-top', '2%');
+		$('.chat-message-item').css('cssText', 'width: 100% !important');
+		$('.chat-avatar').css('width', '20rem');
+		$('.ui.form').css('font-size', '3rem');
+		$('#message-input').attr('rows', '1');
+	}
+
+	$(document).ready(function() {
+		$('.message-button').click(function() {
+			$('#friend-group-list').fadeOut(function() {
+				$('#message-list').fadeIn();
+			});
+		});
+
+		$('.friend-button').click(function() {
+			$('#message-list').fadeOut(function() {
+				$('#friend-group-list').fadeIn();
+			});
+		});
+
+		$('.message-item').click(function() {
+			if($('#chat-panel').css('display') === 'none') {
+				$('#user-panel').fadeOut(function() {
+					updateChatPanel();
+				});
+			}
+		});
+
+	});
+</script>
+
+</body>
+</html>
