@@ -65,6 +65,11 @@ def delete_friend():
             print e
             db.session.rollback()
             return error_insertion_failed()
+    else:
+        errors = {
+            'info': 'bad request.',
+        }
+        return response(400, errors)
 
 
 @userbp.route('/add-group', methods=['POST'])
@@ -82,3 +87,19 @@ def add_group():
         print e
         db.session.rollback()
         return error_insertion_failed()
+
+
+@userbp.route('/delete-group', methods=['POST'])
+@tokenauth.login_required
+def delete_group():
+    group_id = request.json.get('group_id', -1)
+    if group_id and g.user.delete_group(group_id):
+        try:
+            db.session.commit()
+            return response(data={'info': 'operation succeeded.'})
+        except DatabaseError:
+            print e
+            db.session.rollback()
+            return error_insertion_failed()
+    else:
+        return error_not_found('group')

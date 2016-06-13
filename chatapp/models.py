@@ -135,6 +135,14 @@ class User(Base):
         db.session.add(group)
         return group
 
+    def delete_group(self, group_id):
+        group = self.groups.filter(Group.id == group_id).first()
+        if not group:
+            return False
+        self.groups.remove(group)
+        db.session.delete(group)
+        return True
+
     # def is_following(self, user):
     #     return self.following.filter(
     #         following_to_followed.c.followed_user_id == user.id).count() > 0

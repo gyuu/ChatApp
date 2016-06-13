@@ -14,19 +14,24 @@ var friend_item_template = {"<>":"div","class":"item friend-item","data-uid":"${
     {"<>":"div","class":"content","html":"${username}"}
   ]}
 
+
 var group_footer = '</div></div></div>'
+
 
 var message_item_template = {"<>":"div","class":"item message-item","html":[
     {"<>":"img","class":"ui avatar image","src":"${avatar}","html":""},
     {"<>":"div","class":"content","html":"${username}"}
   ]}
 
+
 var group_dropdown_template = '<option value=$gid$>$group_name$</option>'
+
 
 var add_friend_found_user_template = '<div class="field" data-uid="$id$" style="margin:0 auto;">\
 			    <img class="ui avatar image" id="found-avatar" src="$avatar$">\
 			    <span id="found-username">$username$</span>\
 		    </div>'
+
 
 var add_friend_find_user_field = '<div class="ten wide field">\
 		      <input id="search-username" type="text" placeholder="Username">\
