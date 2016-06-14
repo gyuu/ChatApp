@@ -3,7 +3,7 @@ var token;
 var uid;
 var socket;
 var current_talking_friend_id;
-// friend_map 是一个字典，根据好友的 user_id，映射用户名和头像。
+// friend_map 是一个字典，根据好友的 user_id，映射用户名和头像，以及聊天记录。
 var friend_map = new Object();
 
 // json 转 HTML 模板。
@@ -13,13 +13,18 @@ var group_header_template = '<div class="item friend-group g$gid$">\
 <div class="ui animated big middle aligned inverted selection list">'
 
 
-var friend_item_template = {"<>":"div","class":"item friend-item","data-uid":"${id}","html":[
+var friend_item_template = {"<>":"div","class":"item friend-item uid${id}","data-uid":"${id}","html":[
     {"<>":"img","class":"ui avatar image","src":"${avatar}","html":""},
     {"<>":"div","class":"content","html":"${username}"}
   ]}
 
 
 var group_footer = '</div></div></div>'
+
+
+
+var message_bubble_template = '<a class="ui red circular label" \
+style="margin-left: 5%">$count$</a>'
 
 
 var message_item_template = {"<>":"div","class":"item message-item","html":[

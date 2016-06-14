@@ -42,13 +42,14 @@ function getFriends() {
 					'gid' : group['gid']
 				}
 
-				// update friend_map.
+				// initialize friend_map.
 				var friends = group['friends'];
 				for (var i = 0; i < friends.length; i++) {
 					var id = friends[i]['id'];
 					friend_map[id] = {
 						'avatar' : friends[i]['avatar'],
-						'username' : friends[i]['username']
+						'username' : friends[i]['username'],
+						'messages' : new Array()
 					};
 				}
 
@@ -62,16 +63,42 @@ function getFriends() {
 				var group_dropdown_item = strrep(group_dropdown_template, group_header_data);
 				group_dropdown += group_dropdown_item;
 			}
-			// console.log(group_list);
+
 			$('#friend-group-list').append(group_list);
 			$('#group-dropdown').append(group_dropdown);
 		}
 	});
 }
 
+function getOfflineMessage() {
+	socket.emit('offline-msg', {'token':token});
+}
+
+// 渲染消息数据，并添加到聊天窗口。
+function renderMessage(data) {
+	var from_user_id = data['user_id'];
+	var friend_data = friend_map[from_user_id];
+	var left_message_data = {
+		'content' : data['content'],
+		'username' : friend_data['username'],
+		'avatar' : friend_data['avatar']
+	}
+	var message = json2html.transform(left_message_data, left_message_template);
+	$('#message-area').append(message);
+
+	// 调整移动端的消息样式。
+	if(!$('#chat-panel').hasClass('computer only')) {
+		$('.chat-message-item').css('cssText', 'width: 100% !important');
+		$('.chat-avatar').css('width', '20rem');
+	}
+}
+
+// 根据消息数量渲染好友列表中的消息气泡。
+function renderMessageCountLabel(count) {
+	return strrep(message_bubble_template, { 'count': count });
+}
 
 function initSocket() {
-	// test.
 
     var namespace = '/chat';
     socket = io.connect('http://' + document.domain + ':' + location.port + namespace);
@@ -89,28 +116,70 @@ function initSocket() {
     });
 
     socket.on('offline-msg-ack', function(res){
-    	console.log('offline message:');
-    	console.log(res);
+
+    	// 接收到了离线消息。
+    	if (res.status === 'SUCCESS') {
+    		// 使用一个字典来维护好友 id 与消息数的映射。
+    		message_count_map = new Object();
+
+    		for (var i = 0; i < res.data.length; i++) {
+    			// renderMessage(res.data[i]);
+    			// 计算每个好友离线消息的数量。
+    			var from_user_id = parseInt(res.data[i]['user_id']);
+    			if (typeof(message_count_map[from_user_id]) === 'undefined') {
+    				message_count_map[from_user_id] = 0;
+    				console.log(from_user_id);
+    			}
+    			message_count_map[from_user_id]++;
+
+    			// 将消息添加到当前聊天的消息列表中。
+    			friend_map[from_user_id].messages.push(res.data[i]);
+    		}
+
+    		// 遍历这个字典，来生成包含离线消息数量的气泡。
+    		var keylist = Object.keys(message_count_map)
+    		for (var i = 0; i < keylist.length; i++) {
+    		 	var key = keylist[i];
+    			var bubble = renderMessageCountLabel(message_count_map[key]);
+    			$('div .uid'+ key).append(bubble);
+    		}
+
+    		console.log(message_count_map);
+    	}
+
+    	// 消息还没从数据库中取出，等 1 秒钟再次请求。
+    	else {
+    		setTimeout('getOfflineMessage()', 1000);
+    	}
     });
 
+    // 收到消息之后将其显示在聊天窗口中。
     socket.on('message', function(data){
 
-    	console.log(data);
+    	// 将消息加入消息列表。
     	var from_user_id = data['user_id'];
-    	var friend_data = friend_map[from_user_id];
-    	var left_message_data = {
-    		'content' : data['content'],
-    		'username' : friend_data['username'],
-    		'avatar' : friend_data['avatar']
-    	}
-    	var message = json2html.transform(left_message_data, left_message_template);
-		$('#message-area').append(message);
+    	friend_map[from_user_id].messages.push(data);
 
-		// 调整移动端的消息样式。
-		if(!$('#chat-panel').hasClass('computer only')) {
-			$('.chat-message-item').css('cssText', 'width: 100% !important');
-			$('.chat-avatar').css('width', '20rem');
-		}
+    	// 如果消息来自当前聊天好友，直接渲染在页面上。
+    	if (current_talking_friend_id == from_user_id)
+    		renderMessage(data);
+
+    	// 否则，显示气泡。
+    	else {
+    		var from_user = $('div .uid' + from_user_id);
+    		var message_bubble = $(from_user).find('.label');
+
+    		// 如果原来就有气泡，则增加气泡中的消息数量。
+    		if (message_bubble.length) {
+    			var count = parseInt($(message_bubble).text());
+    			$(message_bubble).text(++count);
+    		}
+    		// 否则，增加一个气泡。
+    		else {
+    			var bubble = renderMessageCountLabel(1);
+    			$(from_user).append(bubble);
+    		}
+    	}
     });
 
     socket.emit('login', {'token':token});
@@ -118,32 +187,6 @@ function initSocket() {
 
 
 $(document).ready(function() {
-
-
-	// // 切换消息列表和好友列表的显示。
-	// $('.message-button').click(function() {
-	// 	$('#friend-group-list').fadeOut(function() {
-	// 		$('#message-list').fadeIn();
-	// 	});
-	// });
-
-
-	// // 切换消息列表和好友列表的显示。
-	// $('.friend-button').click(function() {
-	// 	$('#message-list').fadeOut(function() {
-	// 		$('#friend-group-list').fadeIn();
-	// 	});
-	// });
-
-
-	// // 在移动端点击消息时弹出聊天页面。
-	// $('.friend-item').click(function() {
-	// 	if($('#chat-panel').css('display') === 'none') {
-	// 		$('#user-panel').fadeOut(function() {
-	// 			updateChatPanel();
-	// 		});
-	// 	}
-	// });
 
 
 	// 点击 Friends 按钮刷新一下界面。
@@ -170,21 +213,45 @@ $(document).ready(function() {
 		var class_list = $(this).parents('.friend-group').attr('class');
 		var gid = parseInt(class_list.match(gid_pat)[0].substring(1));
 		var selected_friend = this;
+		var user_id = parseInt($('#username').attr('data-uid'));
 
 	    switch (event.which) {
 
+
+	    	// 鼠标左键点击好友。
 	    	// 如果是移动端，则跳转到聊天界面。
-	    	// 如果是 PC 端，则修改聊天窗口顶部的用户名，并激活输入条。
+	    	// 如果是 PC 端，则开始聊天。
 	    	case 1:
+
+	    		// 移动端界面跳转。
 				if($('#chat-panel').css('display') === 'none') {
 					$('#user-panel').fadeOut(function() {
 						updateChatPanel();
 					});
 				}
+				// 修改当前聊天好友的 id。
 	    		current_talking_friend_id = friend_id;
+
+	    		// 激活输入框。
 	    		$('#message-input').parent().removeClass('disabled');
+
+	    		// 显示当前聊天好友名字。
 	    		$('#chat-header-username').hide()
 	    		.text(friend_map[friend_id].username).fadeIn();
+
+	    		// 渲染当前聊天好友的消息。
+	    		$('#message-area').empty();
+	    		var messages = friend_map[friend_id].messages;
+	    		for (var i = 0; i < messages.length; i++) {
+	    			renderMessage(messages[i]);
+	    		}
+
+	    		// 如果有气泡，删掉气泡。
+	    		$(selected_friend).find('.label').remove();
+	    		// 通知服务器，离线消息已经读过了。
+	    		socket.emit('offline-msg-read', 
+	    			{'token' : token, 'user_id':user_id});
+
 	    		break;
 
 	    	// 删除好友。

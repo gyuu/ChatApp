@@ -39,7 +39,7 @@ def save_message(message, is_offline=True):
     try:
         session.commit()
         if is_offline:
-            add_offline_msg(message['user_id'], msg.id)
+            add_offline_msg(message['to_user_id'], msg.id)
         print 'msg %d inserted.' % msg.id
     except DatabaseError as e:
         session.rollback()
@@ -49,6 +49,7 @@ def save_message(message, is_offline=True):
 @celery.task
 def load_messages(msg_ids):
     time.sleep(5)
+    print msg_ids
     msgs = [m.to_json() for m in session.query(Message).filter(
         Message.id.in_(msg_ids)
     ).all()]
