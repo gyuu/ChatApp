@@ -11,7 +11,9 @@
 	<script src="static/semantic/dist/semantic.min.js"></script>
 	<script src="static/js/json2html.js"></script>
 	<script src="static/js/jquery.json2html.js"></script>
+	<script src="static/js/socket.io.js"></script>
 	<!-- my code -->
+	<script src="static/js/utils.js"></script>	
 	<script src="static/js/index.js"></script>
 	<script src="static/js/chat.js"></script>
 </head>
@@ -142,13 +144,13 @@
 		<div id="computer-menu" class="ui computer only grid">
 
 			<div id="user-menu" class="ui two item secondary inverted labeled icon menu">
-			  <a class="item message-button">
-			    <i id="computer-message-button" class="comments icon "></i>
-			    Message
-			  </a>
 			  <a class="item friend-button">
 			    <i id="computer-friend-button" class="users icon "></i>
-			    Friend
+			    Friends
+			  </a>
+			  <a class="item adduser-button">
+			    <i id="computer-adduser-button" class="add user icon "></i>
+			    Add Friend
 			  </a>
 			</div>
 
@@ -157,8 +159,8 @@
 		<div id="mobile-menu" class="ui two column mobile only tablet only grid container">
 
 			<div class="center aligned column">
-				<button id="mobile-message-button" class="ui inverted basic button message-button mobile-btn" style="font-size:3rem;">
-				  Message
+				<button id="mobile-adduser-button" class="ui inverted basic button adduser-button mobile-btn" style="font-size:3rem;">
+				  Add Friend
 				</button>
 			</div>
 			<div class="center aligned column">
@@ -184,7 +186,7 @@
 
 		<!-- user message list begins -->
 
-	  	<div id="message-list" class="ui animated massive middle aligned inverted selection list mylist">
+<!-- 	  	<div id="message-list" class="ui animated massive middle aligned inverted selection list mylist">
 
 		  <div class="item message-item">
 		    <img class="ui avatar image" src="static/img/fuck.jpg">
@@ -207,7 +209,7 @@
 		    </div>
 		  </div>
 
-	  	</div>
+	  	</div> -->
 
 		<!-- user message list ends -->
 
@@ -221,47 +223,25 @@
 
 		<div id="chat-panel" class="seven wide computer sixteen wide mobile column computer only">
 
+			<!-- chat header begins -->
+
+			<div id="chat-header">
+				<h2 class="ui header">
+					<i id="chat-header-back" class="ui chevron left tiny icon"></i>
+					<div class="content" id="chat-header-username"></div>
+				</h2>
+			</div>
+			<!-- chat header ends -->
+
+			<div class="ui divider"></div>
+
 			<!-- message area begins -->
 
-			<div id="message-area" class="ui container">
+			<div id="message-area-wrapper">
 
-				<div class="ui stacked grid fluid container left-message chat-message-item">
-
-					<div class=" middle aligned two wide computer three wide mobile column">
-
-						<img class="ui tiny circular image chat-avatar" src="static/img/remu.jpg">
-
-					</div>
-
-					<div class="left floated middle aligned ten wide column">
-
-						<div class="ui raised compact segment">
-						  <p>我是你爹！</p>
-						</div>
-
-					</div>
+				<div id="message-area" class="ui container">
 
 				</div>
-
-
-				<div class="ui stacked grid fluid container right-message chat-message-item">
-
-					<div class="right floated middle aligned ten wide column">
-
-						<div class="right floated ui raised compact right aligned segment">
-						  <p>嘻嘻，我是你爷爷的爹</p>
-						</div>
-
-					</div>
-
-					<div class="middle aligned two wide computer three wide mobile column">
-
-						<img class="ui tiny circular image chat-avatar" src="static/img/remu.jpg">
-
-					</div>
-
-				</div>
-
 
 			</div>
 
@@ -274,7 +254,7 @@
 			<div id="input-area">
 
 				<div class="ui form">
-				  <div class="field">
+				  <div class="disabled field">
 				    <textarea id="message-input" rows="3" placeholder="Input text here..."></textarea>
 				  </div>
 				</div>
@@ -411,11 +391,6 @@
 <!-- delete group modal ends -->
 
 <!-- modal ends -->
-
-
-<script type="text/javascript">
-
-</script>
 
 </body>
 </html>

@@ -143,20 +143,6 @@ class User(Base):
         db.session.delete(group)
         return True
 
-    # def is_following(self, user):
-    #     return self.following.filter(
-    #         following_to_followed.c.followed_user_id == user.id).count() > 0
-
-    # def follow(self, user):
-    #     if not self.is_following(user):
-    #         self.following.append(user)
-    #         return self
-
-    # def unfollow(self, user):
-    #     if self.is_following(user):
-    #         self.following.remove(user)
-    #         return self
-
 
 class Group(Base):
     id = db.Column(db.Integer, primary_key=True)

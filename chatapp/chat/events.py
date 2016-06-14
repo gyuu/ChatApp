@@ -46,7 +46,9 @@ def login_handler(payload):
     offline_msg_ids = get_offline_msg(payload['user_id'])
     if offline_msg_ids:
         load_messages.apply_async((offline_msg_ids,), task_id=request.sid)
-    emit('login_ack', 'login OK')
+        emit('login_ack', {'offline-msg': True})
+    else:
+        emit('login_ack', {'offline-msg': False})
 
 
 @socketio.on('offline-msg', namespace='/chat')
@@ -84,4 +86,4 @@ def sendmsg_handler(payload):
         save_message.delay(payload)
     else:
         save_message.delay(payload, is_offline=False)
-        send(payload['content'], room=sid)
+        send(payload, room=sid)

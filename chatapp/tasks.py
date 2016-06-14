@@ -26,13 +26,6 @@ Session = sessionmaker(bind=engine)
 session = Session()
 
 
-# @celery.task(name='remove_expired_users')
-# def task_remove_expired_users():
-#     now = int(time.time())
-#     users_removed = redis_store.zremrangebyscore('online_users', 0, now)
-#     return users_removed
-
-
 # @celery.task(name='ping_all_users')
 # def task_ping_all_users():
 #     socketio.emit('ping', namespace='/chat')

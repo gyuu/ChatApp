@@ -35,8 +35,10 @@ def create_app(config_name):
     from .auth import auth as auth_blueprint
     from .user import userbp as user_blueprint
     from .index import indexbp as index_blueprint
+    from .chat import chat as chat_blueprint
     app.register_blueprint(index_blueprint)
     app.register_blueprint(auth_blueprint, url_prefix='/auth')
     app.register_blueprint(user_blueprint, url_prefix='/user')
+    app.register_blueprint(chat_blueprint, url_prefix='/chat')
 
     return app

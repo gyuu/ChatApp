@@ -12,7 +12,7 @@
 	 	$(document).ready(function() {
 
 	        namespace = '/chat';
-	        var socket = io.connect('http://localhost:8000' + namespace);
+	        var socket = io.connect('http://localhost:5000' + namespace);
 
 	        socket.on('conn_ack', function(msg) {
 	        	console.log('connect:');
@@ -41,9 +41,9 @@
 	        	var passwd = $('#password').val();
 				$.ajax({
 		            type: "POST",
-		            url: "/auth/login",
+		            url: "http://localhost:5000/auth/login",
 		            data: JSON.stringify({
-		            	'phone_number' : phone,
+		            	'username' : phone,
 		            	'password' : passwd
 		            }), 
 		            contentType: "application/json; charset=utf-8",
@@ -54,7 +54,7 @@
 		               $('#uid').text(res.data.uid);
 		               token_global = res.data.token;
 		            },
-		            error: function (errormessage) {
+		            error: function (msg) {
 		            	console.log(msg);
 		            }
             	});

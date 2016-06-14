@@ -7,7 +7,7 @@ celeryconfig = {
 
     # 'CELERY_RESULT_BACKEND': 'redis://localhost:6379/0',
 
-    'CELERY_IMPORTS': ('tagbook.tasks', ),
+    'CELERY_IMPORTS': ('chatapp.tasks', ),
 
     'CELERYBEAT_SCHEDULE': {
         # 'remove_offline_users': {
