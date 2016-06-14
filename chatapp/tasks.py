@@ -16,7 +16,9 @@ from . import (
     config,
 )
 
-from .models import Message
+from .models import (
+    Message, Group, User, FriendShip
+)
 from chat.utils import add_offline_msg
 
 engine = create_engine(
@@ -54,3 +56,20 @@ def load_messages(msg_ids):
         Message.id.in_(msg_ids)
     ).all()]
     return msgs
+
+
+@celery.task
+def add_friend(payload):
+    group_id = payload['group_id']
+    friend_id = payload['friend_id']
+    group = session.query(Group).filter(Group.id == group_id).first()
+    friendship = FriendShip(group_id=group_id, friend_id=friend_id)
+    group.friends.append(friendship)
+    session.add(friendship)
+    session.add(group)
+    try:
+        session.commit()
+        print 'friendship (g %d, u %d) inserted.' % (group_id, friend_id)
+    except DatabaseError as e:
+        session.rollback()
+        raise e

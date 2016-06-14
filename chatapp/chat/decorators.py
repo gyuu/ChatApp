@@ -6,7 +6,7 @@ from flask import request
 from flask_socketio import disconnect
 
 from ..models import User
-from .utils import save_last_active_time
+from ..redis_utils import save_last_active_time
 
 
 def authenticated_only(f):

@@ -184,35 +184,6 @@
 
 		<!-- user friend group list ends -->
 
-		<!-- user message list begins -->
-
-<!-- 	  	<div id="message-list" class="ui animated massive middle aligned inverted selection list mylist">
-
-		  <div class="item message-item">
-		    <img class="ui avatar image" src="static/img/fuck.jpg">
-		    <div class="content">
-		      你爸爸
-		    </div>
-		  </div>
-
-		  <div class="item message-item">
-		    <img class="ui avatar image" src="static/img/remu.jpg">
-		    <div class="content">
-		      博丽灵梦
-		    </div>
-		  </div>
-
-		  <div class="item message-item">
-		    <img class="ui avatar image" src="static/img/koko.jpg">
-		    <div class="content">
-		      泉此方
-		    </div>
-		  </div>
-
-	  	</div> -->
-
-		<!-- user message list ends -->
-
 	</div>
 
 	<!-- user panel ends -->
@@ -390,7 +361,113 @@
 
 <!-- delete group modal ends -->
 
-<!-- modal ends -->
+<!-- upload modal begins -->
 
+<div id="upload-modal" class="ui tiny modal">
+    <div class="ui header">
+    	Change Avatar
+    </div>
+    <div class="content">
+
+		<div class="ui form">
+
+			<img id="upload-preview" class="ui small image" src="static/img/fuck.jpg" style="margin:0 auto;">
+
+			<div class="ui divider"></div>
+
+			<div class="six wide field" style="width:100%;margin:0 auto;">
+			    <label for="upload-avatar" class="ui icon button">
+			        <i class="file icon"></i>
+			        Open File
+			    </label>
+			    <input type="file" id="upload-avatar" style="display:none">
+			</div>
+
+		</div>
+    </div>
+	<div class="actions">
+	    <div class="ui right deny center aligned button">
+	      Cancel
+	    </div>
+	    <div id="upload-submit" class="ui primary center aligned button">
+	      Upload
+	    </div>
+	</div>
+
+</div>
+
+<!-- upload modal ends -->
+
+<!-- add friend request begins -->
+
+<div id="add-friend-request-modal" class="ui tiny modal">
+    <div class="ui icon header">
+      <i class="add user icon"></i>
+      Add Friend Request
+    </div>
+    <div class="content">
+
+		<div class="ui form">
+
+			<div id="add-friend-request-user" class="inline fields">
+
+			  <div class="field" style="margin:0 auto;">
+				    <img class="ui avatar image" id="found-avatar" src="#" />
+				    <span id="found-username"></span>
+			  </div>
+
+			</div>
+
+			<div class="ui divider"></div>
+
+			<div class="actions">
+				<div class="two fluid ui inverted buttons">
+				  <div id="add-friend-request-cancel" class="ui deny button">
+				    <i class="remove icon"></i>
+				    Cancel
+				  </div>
+				  <div id="add-friend-request-submit" class="ui green button">
+				    <i class="checkmark icon"></i>
+				    Add
+				  </div>
+				</div>
+			</div>
+
+		</div>
+
+    </div>
+
+</div>
+
+<!-- add friend request ends -->
+
+<!-- modal ends -->
+<script>
+$('#add-friend-request-submit').click(function() {
+
+	var friend_id = $('#add-friend-request-user').attr('data-uid');
+	var payload = {
+		'token' : token,
+		'friend_id' : friend_id,
+		'group_id' : 8
+	}
+
+	socket.emit('add-friend-ack', payload, function(res) {
+		var group_id = 8;
+		var found_user = $('#add-friend-request-user').find('div.field');
+		var friend_item_data = {
+			'id': friend_id,
+			'username': found_user.find('span').text(),
+			'avatar': found_user.find('img').attr('src')
+		}
+		var friend_item = json2html.transform(friend_item_data, friend_item_template);
+		$('#friend-group-list').find('div.g' + group_id).find('.list').append(friend_item);
+
+	});
+
+	$('#add-friend-request-modal').modal('hide');
+
+});
+</script>
 </body>
 </html>

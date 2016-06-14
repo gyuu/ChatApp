@@ -52,7 +52,6 @@ def login():
         return response(400, errors)
     else:
         token = user.generate_auth_token()
-        # redis_store.hmset('user', {token: user.id})
         data = {
             'token': token,
             'uid': user.id,

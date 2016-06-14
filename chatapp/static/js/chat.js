@@ -98,6 +98,8 @@ function renderMessageCountLabel(count) {
 	return strrep(message_bubble_template, { 'count': count });
 }
 
+
+// 初始化 websocket。
 function initSocket() {
 
     var namespace = '/chat';
@@ -182,11 +184,71 @@ function initSocket() {
     	}
     });
 
+    socket.on('add-friend-request', function(data) {
+    	authorized_post('/user/findbyid', data, function(res) {
+    		if(!res.isSuccess)
+    			console.log(res.error_message);
+    		else {
+    			$('#add-friend-request-user').attr('data-uid', res.data.id);
+				var found_user = $('#add-friend-request-user').find('div.field');
+				found_user.find('img').attr('src', res.data.avatar);
+				found_user.find('span').text(res.data.username);
+    		}
+    		$('#add-friend-request-modal').modal('show');
+    	});
+    });
+
     socket.emit('login', {'token':token});
+}
+
+// 上传头像时的预览。
+function previewImage(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        
+        reader.onload = function (e) {
+            $('#upload-preview').attr('src', e.target.result);
+        }
+        
+        reader.readAsDataURL(input.files[0]);
+    }
 }
 
 
 $(document).ready(function() {
+
+
+	// 点击用户头像，可以呼出修改头像的 modal。
+	$('#user-avatar').click(function() { 
+		$('#upload-modal').modal('show');
+	});
+
+	// 上传头像时的预览。
+    $("#upload-avatar").change(function(){
+        previewImage(this);
+    });
+
+
+	// 上传图片。
+	$('#upload-submit').click(function() {
+		var formData = new FormData();
+		formData.append('file', $('#upload-avatar')[0].files[0]);
+		$.ajax({
+		    url: '/user/avatar',
+		    type: 'POST',
+		    cache: false,
+		    data: formData,
+	        headers: { 'Authorization': 'token ' + token },
+		    processData: false,
+		    contentType: false
+		}).done(function(res) { 
+			console.log(res);
+			getUserProfile();
+			$('#upload-modal').modal('hide');
+		}).fail(function(res) { 
+			console.log(res);
+		});
+	});
 
 
 	// 点击 Friends 按钮刷新一下界面。
@@ -386,6 +448,13 @@ $(document).ready(function() {
 					}
 					var friend_item = json2html.transform(friend_item_data, friend_item_template);
 					$('#friend-group-list').find('div.g' + group_id).find('.list').append(friend_item);
+
+					// 更新 friend_map
+					friend_map[user_id] = {
+						'avatar' : friend_item_data['avatar'],
+						'username' : friend_item_data['username'],
+						'messages' : new Array()
+					}
 
 					// 恢复 modal 框中的内容。
 					$('#add-friend-find-user-field').fadeIn();

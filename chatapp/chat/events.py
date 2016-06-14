@@ -12,12 +12,13 @@ from ..models import User
 from ..tasks import (
     save_message,
     load_messages,
+    add_friend,
 )
 from .decorators import (
     authenticated_only,
     track_activity,
 )
-from .utils import (
+from ..redis_utils import (
     mark_online,
     delete_connection,
     get_sid,
@@ -87,3 +88,10 @@ def sendmsg_handler(payload):
     else:
         save_message.delay(payload, is_offline=False)
         send(payload, room=sid)
+
+
+@socketio.on('add-friend-ack', namespace='/chat')
+@authenticated_only
+def add_friend_ack_handler(payload):
+    add_friend.delay(payload)
+    send('OK')

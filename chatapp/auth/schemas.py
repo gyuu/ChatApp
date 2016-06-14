@@ -12,7 +12,7 @@ from marshmallow.decorators import (
 from flask import g
 
 from .. import db
-from ..models import User
+from ..models import User, Group
 from ..schemas import BaseSchema
 
 from .validators import (
@@ -61,6 +61,9 @@ class RegisterSchema(BaseSchema):
         """
         user = User(**data)
         db.session.add(user)
+        group = Group(name='default')
+        user.groups.append(group)
+        db.session.add(group)
         try:
             db.session.commit()
             return user

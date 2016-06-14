@@ -1,8 +1,11 @@
-from flask import Blueprint, render_template
+from flask import (
+    Blueprint,
+    render_template,
+    request,
+)
+
 
 indexbp = Blueprint('index', __name__)
-
-from . import socketio
 
 
 @indexbp.route('/', methods=['GET'])
