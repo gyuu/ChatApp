@@ -6,13 +6,13 @@ The frontend is based on Semantic UI. The backend is based on Flask and SQLAlche
 
 What makes online chatting possbile is Socket.IO and @miguelgrinberg's Flask-SocketIO.
 
-# Screenshots
+## Screenshots
 
 This is the main page:
 
 ![main](screenshots/main.png)
 
-# Dependencies
+## Dependencies
 
 To get this app running, you have to install the following dependencies:
 
@@ -21,9 +21,9 @@ To get this app running, you have to install the following dependencies:
 - mysql
 - redis
 
-# Set up
+## Set up
 
-## create virtualenv
+### create virtualenv
 
 First, create a virtualenv using `mkvirtualenv` command. For example, 
 
@@ -34,7 +34,7 @@ cd ChatApp
 pip install -r requirements.txt
 ```
 
-## create mysql user and database
+### create mysql user and database
 
 Open `config.py`, create a mysql user, and a database, as defined in `SQLALCHEMY_DATABASE_URI`. Or you may change it to whatever you want.
 
@@ -53,7 +53,7 @@ python manage.py db upgrade
 
 By now your database is created.
 
-## set up redis & celery
+### set up redis & celery
 
 Open another terminal tab and `cd ChatApp`, then 
 
@@ -64,7 +64,7 @@ celery worker -A chatapp.celery_worker.celery --loglevel=info
 
 Open another terminal tab and run redis, for example, `redis-server`. Make sure your redis server port matches the port defined in `config.py`.
 
-## finally
+### finally
 
 ```
 python manage.py run
