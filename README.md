@@ -53,7 +53,13 @@ python manage.py db upgrade
 
 By now your database is created.
 
-### set up redis & celery
+### set up redis
+
+Open another terminal tab and run redis. 
+
+For example, `redis-server`. Make sure your redis server port matches the port defined in `config.py`.
+
+### set up celery
 
 Open another terminal tab and `cd ChatApp`, then 
 
@@ -61,8 +67,6 @@ Open another terminal tab and `cd ChatApp`, then
 workon chat
 celery worker -A chatapp.celery_worker.celery --loglevel=info
 ```
-
-Open another terminal tab and run redis, for example, `redis-server`. Make sure your redis server port matches the port defined in `config.py`.
 
 ### finally
 
