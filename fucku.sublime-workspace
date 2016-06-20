@@ -1,0 +1,1646 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"group",
+				"group_id"
+			],
+			[
+				"fr",
+				"from"
+			],
+			[
+				"gro",
+				"group_id"
+			],
+			[
+				"us",
+				"user_id"
+			],
+			[
+				"add-f",
+				"add-friend-request-user"
+			],
+			[
+				"is",
+				"is_online"
+			],
+			[
+				"frie",
+				"friend_item_data"
+			],
+			[
+				"error",
+				"error_not_found"
+			],
+			[
+				"fir",
+				"friend_id"
+			],
+			[
+				"upload",
+				"upload-modal"
+			],
+			[
+				"err",
+				"error_insertion_failed"
+			],
+			[
+				"file",
+				"file_url"
+			],
+			[
+				"inde",
+				"indexbp"
+			],
+			[
+				"offline-",
+				"offline-msg"
+			],
+			[
+				"offl",
+				"offline-msg"
+			],
+			[
+				"co",
+				"console"
+			],
+			[
+				"messa",
+				"message_bubble"
+			],
+			[
+				"render",
+				"renderMessageCountLabel"
+			],
+			[
+				"mse",
+				"message_bubble"
+			],
+			[
+				"friend_ma",
+				"friend_item_template"
+			],
+			[
+				"selec",
+				"selected_friend"
+			],
+			[
+				"mess",
+				"message-area"
+			],
+			[
+				"friend",
+				"friend_id"
+			],
+			[
+				"fre",
+				"friend_map"
+			],
+			[
+				"key",
+				"keylist"
+			],
+			[
+				"ke",
+				"keylist"
+			],
+			[
+				"mes",
+				"message_count_map"
+			],
+			[
+				"off",
+				"offline-msg"
+			],
+			[
+				"c",
+				"click"
+			],
+			[
+				"tabl",
+				"table-cell"
+			],
+			[
+				"frien",
+				"friend-group-list"
+			],
+			[
+				"frein",
+				"friend"
+			],
+			[
+				"ri",
+				"right_message_template"
+			],
+			[
+				"from",
+				"from_user_id"
+			],
+			[
+				"friend_",
+				"friend_map"
+			],
+			[
+				"con",
+				"content"
+			],
+			[
+				"gr",
+				"group_id"
+			],
+			[
+				"sele",
+				"selected_friend"
+			],
+			[
+				"er",
+				"error_insertion_failed"
+			],
+			[
+				"gou",
+				"group_id"
+			],
+			[
+				"gid",
+				"gid_pat"
+			],
+			[
+				"clas",
+				"class_list"
+			],
+			[
+				"cla",
+				"class_list"
+			],
+			[
+				"data",
+				"data-uid"
+			],
+			[
+				"delete",
+				"delete-friend-submit"
+			],
+			[
+				"delte",
+				"delete-friend-modal"
+			],
+			[
+				"regi",
+				"registerRightMouseEvent"
+			],
+			[
+				"grou",
+				"group_id"
+			],
+			[
+				"add",
+				"add-friend-found-user"
+			],
+			[
+				"add-fr",
+				"add-friend-find-user-field"
+			],
+			[
+				"found",
+				"found_user"
+			],
+			[
+				"user",
+				"user_id"
+			],
+			[
+				"add-gr",
+				"add-group-submit"
+			],
+			[
+				"aut",
+				"authorized_post"
+			],
+			[
+				"fin",
+				"add-friend-find-user-field"
+			],
+			[
+				"found-",
+				"found-avatar"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"register",
+				"registerRightMouse"
+			],
+			[
+				"sel",
+				"select-group-submit"
+			],
+			[
+				"group_hea",
+				"group_header_data"
+			],
+			[
+				"me",
+				"message_item_template"
+			],
+			[
+				"jsn",
+				"json2html"
+			],
+			[
+				"group_",
+				"group_header_data"
+			],
+			[
+				"go",
+				"group-id"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"get",
+				"getFriends"
+			],
+			[
+				"fri",
+				"friend_group_template"
+			],
+			[
+				"au",
+				"authorized_get"
+			],
+			[
+				"fi",
+				"friend_ids"
+			],
+			[
+				"Friend",
+				"FriendShip"
+			],
+			[
+				"g",
+				"g_friends"
+			],
+			[
+				"fa",
+				"fadeOut"
+			],
+			[
+				"log",
+				"login-form"
+			],
+			[
+				"succ",
+				"success_cb"
+			],
+			[
+				"pots",
+				"post_url"
+			],
+			[
+				"sign",
+				"signup"
+			],
+			[
+				"in",
+				"index_blueprint"
+			],
+			[
+				"va",
+				"validate"
+			],
+			[
+				"sh",
+				"shopicon"
+			],
+			[
+				"shop",
+				"shopname"
+			],
+			[
+				"input",
+				"input-area"
+			],
+			[
+				"left",
+				"left-message"
+			],
+			[
+				"com",
+				"computer"
+			],
+			[
+				"chat",
+				"chat-panel"
+			],
+			[
+				"user-p",
+				"user-panel"
+			],
+			[
+				"fade",
+				"fadeOut"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"im",
+				"important"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"max",
+				"max-height"
+			],
+			[
+				"ma",
+				"margin-top"
+			],
+			[
+				"top",
+				"margin-top"
+			],
+			[
+				"bo",
+				"bottom"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"li",
+				"link	Tag"
+			],
+			[
+				"met",
+				"meta	Tag"
+			],
+			[
+				"sysl",
+				"syslog_handler"
+			],
+			[
+				"use",
+				"user_offline_msg_key"
+			],
+			[
+				"U",
+				"USER_OFFLINE_MSG_KEY"
+			],
+			[
+				"msg",
+				"msg_ids"
+			],
+			[
+				"tra",
+				"track_activity"
+			],
+			[
+				"sid",
+				"SID_UID_HASH_KEY"
+			],
+			[
+				"si",
+				"SID_UID_HASH_KEY"
+			],
+			[
+				"on",
+				"ONLINE_USERS_KEY"
+			],
+			[
+				"ON",
+				"ONLINE_SET_KEY"
+			],
+			[
+				"onl",
+				"online_user_ids"
+			],
+			[
+				"to",
+				"to_user_id"
+			],
+			[
+				"usr",
+				"user_id"
+			],
+			[
+				"ce",
+				"celeryconfig"
+			],
+			[
+				"remo",
+				"remove_expired_users"
+			],
+			[
+				"Task",
+				"TaskBase"
+			],
+			[
+				"conf",
+				"config"
+			],
+			[
+				"token",
+				"tokenauth"
+			],
+			[
+				"init",
+				"init_app"
+			],
+			[
+				"redis",
+				"redis_store"
+			],
+			[
+				"Fl",
+				"FlaskRedis"
+			],
+			[
+				"int",
+				"init_app"
+			],
+			[
+				"brand",
+				"brand_id"
+			],
+			[
+				"bran",
+				"brand_id"
+			],
+			[
+				"brna",
+				"brand_id"
+			],
+			[
+				"follow",
+				"following"
+			],
+			[
+				"followed_",
+				"followed_user_id"
+			],
+			[
+				"sec",
+				"secondary"
+			],
+			[
+				"fo",
+				"following"
+			],
+			[
+				"Pr",
+				"ProtectedResource"
+			],
+			[
+				"sql",
+				"sqlalchemy"
+			],
+			[
+				"Com",
+				"CommentSchema"
+			],
+			[
+				"de",
+				"decorators"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "chatapp/templates/login.html",
+			"settings":
+			{
+				"buffer_size": 11927,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "chatapp/tasks.py",
+			"settings":
+			{
+				"buffer_size": 1793,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "chatapp/static/js/chat.js",
+			"settings":
+			{
+				"buffer_size": 14369,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "chatapp/static/js/utils.js",
+			"settings":
+			{
+				"buffer_size": 4218,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "chatapp/user/views.py",
+			"settings":
+			{
+				"buffer_size": 4365,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "chatapp/static/js/index.js",
+			"settings":
+			{
+				"buffer_size": 1806,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "chatapp/redis_utils.py",
+			"settings":
+			{
+				"buffer_size": 1620,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "chatapp/chat/events.py",
+			"settings":
+			{
+				"buffer_size": 2300,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/C++11.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C++11.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/User/C++11.sublime-build",
+				"Run"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 368.0,
+		"last_filter": "ssp",
+		"selected_items":
+		[
+			[
+				"ssp",
+				"Set Syntax: Python"
+			],
+			[
+				"ssjs",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"sshtml",
+				"Set Syntax: HTML"
+			],
+			[
+				"sscss",
+				"Set Syntax: CSS"
+			],
+			[
+				"ss",
+				"Set Syntax: Python"
+			],
+			[
+				"sscs",
+				"Set Syntax: CSS"
+			],
+			[
+				"ssh",
+				"Set Syntax: HTML"
+			],
+			[
+				"ssht",
+				"Set Syntax: HTML"
+			],
+			[
+				"js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"py",
+				"Set Syntax: Python"
+			],
+			[
+				"Snippet: ",
+				"Snippet: #!/usr/bin/env"
+			],
+			[
+				"pci",
+				"Package Control: Install Package"
+			],
+			[
+				"m",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"sv",
+				"Set Syntax: Verilog"
+			],
+			[
+				"s+",
+				"Set Syntax: C++"
+			],
+			[
+				"ssmake",
+				"Set Syntax: Makefile Improved"
+			],
+			[
+				"sg",
+				"Set Syntax: GLSL"
+			],
+			[
+				"s++",
+				"Set Syntax: C++"
+			],
+			[
+				"sh",
+				"Set Syntax: HTML"
+			],
+			[
+				"p",
+				"Package Control: Install Package"
+			],
+			[
+				"g",
+				"Set Syntax: GLSL"
+			],
+			[
+				"sgl",
+				"Set Syntax: GLSL"
+			],
+			[
+				"c+",
+				"Set Syntax: C++"
+			],
+			[
+				"ssgl",
+				"Set Syntax: GLSL"
+			],
+			[
+				"sc+",
+				"Set Syntax: C++"
+			],
+			[
+				"ssme",
+				"Set Syntax: Markdown Extended"
+			],
+			[
+				"ssmae",
+				"Set Syntax: Markdown Extended"
+			],
+			[
+				"ma",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"sme",
+				"Set Syntax: Markdown Extended"
+			],
+			[
+				"sm",
+				"Set Syntax: Markdown"
+			],
+			[
+				"mar",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"ssc++",
+				"Set Syntax: C++"
+			],
+			[
+				"ssmar",
+				"Set Syntax: Markdown Extended"
+			],
+			[
+				"ssm",
+				"Set Syntax: Markdown Extended"
+			],
+			[
+				"ssc",
+				"Set Syntax: C"
+			],
+			[
+				"sslatex",
+				"Set Syntax: LaTeX"
+			],
+			[
+				"ssma",
+				"Set Syntax: Makefile"
+			],
+			[
+				"s",
+				"Set Syntax: Python"
+			],
+			[
+				"ssc+",
+				"Set Syntax: C++"
+			],
+			[
+				"SSM",
+				"Set Syntax: Markdown Extended"
+			],
+			[
+				"markdown e",
+				"Set Syntax: Markdown Extended"
+			],
+			[
+				"ssmark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"sma",
+				"Set Syntax: Markdown"
+			],
+			[
+				"ssarm",
+				"Set Syntax: ARM Assembly"
+			],
+			[
+				"s s c",
+				"Set Syntax: C"
+			],
+			[
+				"scc",
+				"SublimeLinter: Clear Caches"
+			],
+			[
+				"",
+				"About"
+			],
+			[
+				"pcl",
+				"Package Control: List Packages"
+			],
+			[
+				"ssla",
+				"Set Syntax: LaTeX"
+			],
+			[
+				"Cscope: ",
+				"Cscope: Look up symbol"
+			],
+			[
+				"Cscope: l",
+				"Cscope: Look up symbol"
+			],
+			[
+				"pcr",
+				"Package Control: Remove Package"
+			],
+			[
+				"pc",
+				"Package Control: List Packages"
+			],
+			[
+				"ssl",
+				"Set Syntax: LaTeX"
+			],
+			[
+				"sp",
+				"Set Syntax: Python"
+			],
+			[
+				"sc++",
+				"Set Syntax: C++"
+			],
+			[
+				"sst",
+				"Set Syntax: TeX"
+			],
+			[
+				"sste",
+				"Set Syntax: TeX"
+			],
+			[
+				"ssj",
+				"Set Syntax: Java"
+			],
+			[
+				"ja",
+				"Set Syntax: Java"
+			],
+			[
+				"md",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"ssob",
+				"Set Syntax: Objective-C"
+			],
+			[
+				"mp",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"s s m",
+				"Set Syntax: Markdown"
+			],
+			[
+				"ssja",
+				"Set Syntax: Java"
+			],
+			[
+				"ssr",
+				"Set Syntax: Ruby"
+			],
+			[
+				"pc ",
+				"Package Control: Install Package"
+			],
+			[
+				"ssa",
+				"Set Syntax: AppleScript"
+			]
+		],
+		"width": 561.0
+	},
+	"console":
+	{
+		"height": 399.0,
+		"history":
+		[
+			"clear",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/chatapp",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/chatapp/auth",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/chatapp/chat",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/chatapp/static",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/chatapp/static/css",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/chatapp/static/js",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/chatapp/user"
+	],
+	"file_history":
+	[
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/chatapp/chat/decorators.py",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/chatapp/templates/zz.html",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/config.py",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/chatapp/static/semantic/dist/semantic.css",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/chatapp/models.py",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/chatapp/user/views.py",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/chatapp/redis_utils.py",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/chatapp/chat/utils.py",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/chatapp/utils.py",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/chatapp/auth/schemas.py",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/chatapp/auth/views.py",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/chatapp/tasks.py",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/chatapp/chat/events.py",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/chatapp/static/js/utils.js",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/chatapp/user/utils.py",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/chatapp/index.py",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/chatapp/test.py",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/chatapp/templates/upload.html",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/chatapp/static/css/chat.css",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/chatapp/static/js/index.js",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/manage.py",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/chatapp/celery_worker.py",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/chatapp/celeryconfig.py",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/chatapp/__init__.py",
+		"/Users/gyuu/Desktop/All/Flask/Flask-SocketIO-Chat/app/templates/chat.html",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/migrations/script.py.mako",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/chatapp/templates/login.html",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/chatapp/static/css/index.css",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/chatapp/templates/cc.html",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/chatapp/static/js/chat.js",
+		"/Users/gyuu/Desktop/All/TagBookV2/tagbook/templates/zz.html",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/chatapp/templates/chat.html",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/chatapp/user/__init__.py",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/chatapp/chat/__init__.py",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/chatapp/auth/__init__.py",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/tagbook/static/login.html",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/chatapp/auth/index.py",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/tagbook/auth/views.py",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/tagbook/auth/validators.py",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/tagbook/chat/events.py",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/tagbook/auth/schemas.py",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/tagbook/models.py",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/migrations/versions/69e4c6cc16a7_.py",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/migrations/versions/bf5b3bdbfacf_.py",
+		"/Users/gyuu/Desktop/All/Courses/BS/FUCKU/tagbook/__init__.py",
+		"/Users/gyuu/Desktop/All/Courses/SE/fuckyou/SE/db/C2/api.js",
+		"/Users/gyuu/Desktop/All/Courses/SE/fuckyou/SE/db/C1/mysql_interface.js",
+		"/Users/gyuu/Desktop/All/Courses/SE/fuckyou/SE/db/C1/auth.js",
+		"/Users/gyuu/Desktop/All/Courses/SE/fuckyou/SE/db/C3/datamodel.js",
+		"/Users/gyuu/Desktop/All/Courses/SE/fuckyou/SE/db/C3/C3_db.sql",
+		"/Users/gyuu/Desktop/All/Courses/SE/fuckyou/SE/db/C3/hotelManager.js",
+		"/Users/gyuu/Desktop/All/Courses/SE/fuckyou/SE/db/C3/outer_api.js",
+		"/Users/gyuu/Desktop/All/Courses/SE/fuckyou/SE/app.js",
+		"/Users/gyuu/Desktop/All/Courses/BS/fuckyouzz/static/css/chat.css",
+		"/Users/gyuu/Desktop/All/Courses/BS/fuckyouzz/chat.html",
+		"/Users/gyuu/Desktop/All/Courses/BS/fuckyouzz/static/fuckcss/chat.css",
+		"/Users/gyuu/Desktop/All/Courses/BS/fuckyouzz/login.html",
+		"/Users/gyuu/semantic/dist/semantic.min.css",
+		"/Users/gyuu/semantic/dist/semantic.css",
+		"/Users/gyuu/Desktop/All/Courses/BS/fuckyouzz/static/semantic/dist/semantic.css",
+		"/Users/gyuu/Desktop/All/Courses/BS/fuckyouzz/static/semantic-bak/dist/semantic.css",
+		"/Users/gyuu/Desktop/All/Courses/BS/fuckyouzz/static/semantic/src/theme.config",
+		"/Users/gyuu/Desktop/All/Courses/BS/fuckyouzz/register.html",
+		"/Users/gyuu/Desktop/All/Courses/BS/fuckyouzz/static/semantic/dist/semantic.min.css",
+		"/Users/gyuu/Desktop/All/Courses/BS/fuckyouzz/zz.html",
+		"/Users/gyuu/Desktop/All/Courses/BS/fuckyouzz/static/zz.html",
+		"/Users/gyuu/Desktop/All/Courses/BS/fuckyouzz/static/css/fuck.css",
+		"/Users/gyuu/Desktop/All/Courses/BS/fuckyouzz/fuck.html",
+		"/Users/gyuu/Desktop/All/Courses/BS/fuckyouzz/index.html",
+		"/Users/gyuu/Desktop/All/Courses/BS/fuckyouzz/static/fuck.html",
+		"/Users/gyuu/Desktop/All/Courses/BS/fuckyouzz/static/css/zz.css",
+		"/Users/gyuu/Desktop/All/Courses/BS/fuckyouzz/static/css/font-awesome-zz.css",
+		"/Users/gyuu/Desktop/All/Courses/BS/fuckyouzz/static/css/zzfont.css",
+		"/Users/gyuu/Desktop/All/Courses/BS/fuckyouzz/static/js/nicescroll.js",
+		"/Users/gyuu/Desktop/All/Courses/BS/fuckyouzz/static/css/index.css",
+		"/Users/gyuu/Desktop/All/Courses/BS/fuckyouzz/font-awesome.min.css",
+		"/Users/gyuu/Desktop/All/Courses/EMBEDDED/project/realtimezz/index.html",
+		"/Users/gyuu/Desktop/All/Flask/frontend/zz.html",
+		"/Users/gyuu/Desktop/All/TagBookV2/config.py",
+		"/Users/gyuu/Desktop/All/TagBookV2/tagbook/tasks.py",
+		"/Users/gyuu/Desktop/All/TagBookV2/manage.py",
+		"/Users/gyuu/Desktop/All/TagBookV2/app.py",
+		"/Users/gyuu/Desktop/All/TagBookV2/requirements.txt",
+		"/Users/gyuu/Desktop/All/TagBookV2/tagbook/models.py",
+		"/Users/gyuu/Desktop/All/TagBookV2/tagbook/schemas.py",
+		"/Users/gyuu/Desktop/All/TagBookV2/tagbook/auth/views.py",
+		"/Users/gyuu/Desktop/All/TagBookV2/tagbook/auth/validators.py",
+		"/Users/gyuu/Desktop/All/TagBookV2/tagbook/chat/utils.py",
+		"/Users/gyuu/Desktop/All/TagBookV2/tagbook/__init__.py",
+		"/Users/gyuu/Desktop/All/TagBookV2/tagbook/chat/events.py",
+		"/Users/gyuu/Desktop/All/TagBookV2/tagbook/celery_worker.py",
+		"/Users/gyuu/Desktop/All/TagBookV2/tagbook/celeryconfig.py",
+		"/Users/gyuu/Desktop/All/TagBookV2/tagbook/chat/decorators.py",
+		"/Users/gyuu/Desktop/All/TagBookV2/tagbook/extensions.py",
+		"/Users/gyuu/Desktop/All/TagBookV2/tagbook/chat/__init__.py",
+		"/Users/gyuu/Desktop/All/Flask/flask-celery-example/templates/index.html",
+		"/Users/gyuu/Desktop/All/TagBookV2/tagbook/chat/mark_online.py",
+		"/Users/gyuu/Desktop/All/Flask/flask-celery-example/serv.py",
+		"/Users/gyuu/Desktop/All/TagBookV2/tagbook/profile/views.py",
+		"/Users/gyuu/Desktop/All/TagBookV2/tagbook/utils.py",
+		"/Users/gyuu/Desktop/All/TagBookV2/tagbook/profile/schemas.py",
+		"/Users/gyuu/Desktop/All/TagBookV2/tagbook/chat/views.py",
+		"/Users/gyuu/Desktop/All/TagBookV2/tagbook/auth/schemas.py",
+		"/Users/gyuu/Desktop/All/TagBookV2/tagbook/sns/views.py",
+		"/Users/gyuu/Desktop/All/TagBookV2/tagbook/profile/__init__.py",
+		"/Users/gyuu/Desktop/All/TagBookV2/tests/posts.py",
+		"/Users/gyuu/Desktop/All/TagBookV2/tagbook/sns/schemas.py",
+		"/Users/gyuu/Desktop/All/TagBookV2/tagbook/sns/__init__.py",
+		"/Users/gyuu/Desktop/All/TagBookV2/tests/__init__.py",
+		"/Users/gyuu/Desktop/All/TagBookV2/tagbook/sns/user_schema.py",
+		"/Users/gyuu/Desktop/All/TagBookV2/tests/register.py",
+		"/Users/gyuu/Desktop/All/TagBookV2/tagbook/sns/args.py",
+		"/Users/gyuu/Desktop/All/TagBookV2/tagbook/auth/__init__.py",
+		"/Users/gyuu/.virtualenvs/startup/lib/python2.7/site-packages/webargs/core.py",
+		"/Users/gyuu/Desktop/All/TagBookV2/tagbook/parsers.py",
+		"/Users/gyuu/Desktop/All/TagBookV2/migrations/script.py.mako",
+		"/Users/gyuu/Desktop/All/TagBookV2/migrations/alembic.ini",
+		"/Users/gyuu/Desktop/All/TagBookV2/tagbook/auth/utils.py",
+		"/Users/gyuu/Library/Application Support/Sublime Text 3/Packages/User/auto-utf8.sublime-snippet",
+		"/Users/gyuu/Library/Application Support/Sublime Text 3/Packages/User/auto-utf8",
+		"/Users/gyuu/Desktop/All/Python/lang/mixin/usage.py",
+		"/Users/gyuu/Desktop/All/Python/lang/mixin/utils.py",
+		"/Users/gyuu/Projects/tagbook_project/tagbook/apps/myauth/validators.py",
+		"/Users/gyuu/Projects/tagbook_project/tagbook/apps/users/views.py",
+		"/Users/gyuu/Projects/tagbook_project/tagbook/apps/users/serializers.py",
+		"/Users/gyuu/Desktop/All/Courses/Courses.md",
+		"/Users/gyuu/Projects/tagbook_project/tagbook/apps/myauth/serializers.py",
+		"/Users/gyuu/Projects/tagbook_project/tagbook/apps/myauth/views.py"
+	],
+	"find":
+	{
+		"height": 54.0
+	},
+	"find_in_files":
+	{
+		"height": 203.0,
+		"where_history":
+		[
+			".",
+			"/Users/gyuu/Desktop/Courses/EMBEDDED/Lab3/G",
+			"",
+			"/Users/gyuu/Desktop/Courses/ARCH/LAB/exp3 code",
+			"",
+			";\\n",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"is_user_online",
+			"emit",
+			"data-uid",
+			"selected",
+			"friend_map",
+			"friend-item",
+			"chat-panel",
+			"friend-item",
+			"message-button",
+			"tagbook",
+			"friend-item",
+			"add-group",
+			"search",
+			"divider",
+			"call-modals",
+			"user",
+			"friend-item",
+			"Friend",
+			"signup-sub",
+			"login-btn",
+			"phone_number",
+			"computer only",
+			"message-button",
+			"mbl-btn",
+			"computer",
+			"computer ",
+			"username",
+			"icon",
+			"chat-panel-wrapper",
+			"W_person_info",
+			"header",
+			"request.json",
+			"mark_online",
+			"mark",
+			"redis",
+			"profile",
+			"error_not",
+			"validat",
+			"except",
+			"e",
+			"exce",
+			"except",
+			"dump",
+			"exists",
+			"description",
+			"on_valita",
+			"parse",
+			"msm",
+			"validate_phonenumber",
+			"BaseSchema",
+			"CustomErrorSchema",
+			"PrettyErrorSchema",
+			"auth",
+			"dynamic=",
+			"ir_in",
+			"ir_en",
+			"debug_en",
+			"btn_int",
+			"BTNN",
+			"ir_in",
+			"BTNW",
+			"DHT11_PIN",
+			"GPIO_Pin_15",
+			"GPIO_Pin_11",
+			"GPIO_Co",
+			"HT11_OK",
+			"DHT11_Temperature",
+			"DHT11_Wait",
+			"DHT11_PIN",
+			"DHT11_PORT->IDR",
+			"DHT11_Read_Data",
+			"led",
+			"inst_addr",
+			"naive_inst_addr",
+			"jump_en",
+			"jump_addr",
+			"jump_en",
+			"ret_addr",
+			"cp_data_w",
+			"cp_data_r",
+			"cp_addr_r",
+			"real_int",
+			"inst_data_ctrl",
+			"cp_oper",
+			"jump_en",
+			"ir_en",
+			"cp_oper",
+			"forward",
+			"alu_oper",
+			"ir_en",
+			"btn_int",
+			"btn_int_prev",
+			"real_int",
+			"ir_in",
+			"btn_reset",
+			"mips_core",
+			"debug_addr_1",
+			"jump_addr",
+			"jump_en",
+			"jump_en_id",
+			"jump_en",
+			"inst_addr",
+			"jump_en",
+			"ret_addr",
+			"pc_src",
+			"ret_addr",
+			"cp_data_w",
+			"cp_data_r",
+			"exe_b_src_exe",
+			"opb_id",
+			"cp_data_r",
+			"cp_addr_r",
+			"jump_en",
+			"ir_en",
+			"jump_en",
+			"ir_en",
+			"cp_oper",
+			"CP0_EPCR",
+			"jump_addr",
+			"cp",
+			"pc_src",
+			"PC",
+			"data_src",
+			"CP0",
+			"diff -bur",
+			"CP0",
+			"findUserByEmail",
+			"lightPos"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"header",
+			"friend-list",
+			"request.get_json(force=True)",
+			"BaseSchema",
+			"CustomErrorSchema",
+			"shader",
+			"2",
+			"1",
+			"flag",
+			"seq_cst",
+			"Zombie",
+			"sin6",
+			"lrz",
+			"lsz",
+			"Delta",
+			"readBMPData",
+			"readBMPHeader",
+			"readBMPSize",
+			"isBMP",
+			"generateOutput",
+			"do_op",
+			"rotate",
+			"readBMPHeader",
+			"readBMPSize",
+			"isBMP",
+			"readBMPData",
+			"generateOutput",
+			"Logarithmic",
+			"generateOutput",
+			"readBMPData",
+			"isBMP",
+			"readBMPSize",
+			"readBMPHeader",
+			"generateOutput",
+			"readBMPData",
+			"readBMPSize",
+			"readBMPHeader",
+			"isBMP",
+			"## ",
+			"\\n#",
+			"utopic",
+			";\\n",
+			">\\n",
+			"\\\\n",
+			"\\n",
+			"print\\($1\\)",
+			"",
+			"h",
+			"x",
+			"ImpulseResponse",
+			"InputSignal",
+			" ",
+			"\\s",
+			"作家A"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "chatapp/templates/login.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11927,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11873,
+								11873
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2407.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "chatapp/tasks.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1793,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1352,
+								1352
+							]
+						],
+						"settings":
+						{
+							"autopep8_view_autosave": true,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 817.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "chatapp/static/js/chat.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 14369,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5569,
+								5569
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1927.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "chatapp/static/js/utils.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4218,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4121,
+								4136
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2123.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "chatapp/user/views.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4365,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								798,
+								804
+							]
+						],
+						"settings":
+						{
+							"autopep8_view_autosave": true,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 411.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "chatapp/static/js/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1806,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "chatapp/redis_utils.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1620,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 706.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "chatapp/chat/events.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2300,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2297,
+								2297
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1425.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.autopep8":
+	{
+		"height": 98.0
+	},
+	"output.exec":
+	{
+		"height": 204.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/LaTeXTools/LaTeX.sublime-build",
+	"project": "fucku.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"int",
+				"code/Interpreter.h"
+			],
+			[
+				"api",
+				"code/API.h"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 163.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 360.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 237.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
