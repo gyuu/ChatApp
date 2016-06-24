@@ -69,7 +69,7 @@ def add_friend(payload):
     session.add(group)
     try:
         session.commit()
-        print 'friendship (g %d, u %d) inserted.' % (group_id, friend_id)
+        print 'friendship (g %d, u %d) inserted.' % (int(group_id), int(friend_id))
     except DatabaseError as e:
         session.rollback()
         raise e

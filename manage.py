@@ -44,7 +44,7 @@ def make_shell_context():
 @manager.command
 def run():
     print 'socketio server running'
-    socketio.run(app, debug=True)
+    socketio.run(app, host='0.0.0.0')
 
 
 manager.add_command('shell', Shell(make_context=make_shell_context))
