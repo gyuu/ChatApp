@@ -32,7 +32,7 @@ class RegisterSchema(BaseSchema):
                               field_name='username',
                               should_exist=False
                           ))
-    password = fields.Str(load_only=True, required=True)
+    password = fields.Str(load_only=True, min_length=6, required=True)
     email = fields.Email(required=True,
                          validate=wrapper(
                              validate_existence,

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>FUCK U</title>
+	<title>We Chat!</title>
 	<meta charset="utf-8" />
 	<link rel="stylesheet" type="text/css" href="static/semantic/dist/semantic.css" />
 	<link rel="stylesheet" type="text/css" href="static/css/index.css">	
@@ -77,7 +77,7 @@
 	    <h2 class="ui teal image header">
 	      <img src="static/img/fuck.jpg" class="image">
 	      <div class="content">
-	        Sign up to FUCK U
+	        Sign up to We Chat! 
 	      </div>
 	    </h2>
 
@@ -446,14 +446,18 @@
 $('#add-friend-request-submit').click(function() {
 
 	var friend_id = $('#add-friend-request-user').attr('data-uid');
+	var first_group = $('#friend-group-list').find('.friend-group')[0];
+	var _group_id = parseInt(
+		$(first_group).attr('class').split(' ')[2].substring(1)
+		);
 	var payload = {
 		'token' : token,
 		'friend_id' : friend_id,
-		'group_id' : 8
+		'group_id' : _group_id
 	}
 
 	socket.emit('add-friend-ack', payload, function(res) {
-		var group_id = 8;
+		var group_id = _group_id;
 		var found_user = $('#add-friend-request-user').find('div.field');
 		var friend_item_data = {
 			'id': friend_id,
@@ -463,6 +467,11 @@ $('#add-friend-request-submit').click(function() {
 		var friend_item = json2html.transform(friend_item_data, friend_item_template);
 		$('#friend-group-list').find('div.g' + group_id).find('.list').append(friend_item);
 
+		friend_map[friend_id] = {
+			'avatar' : friend_item_data['avatar'],
+			'username' : friend_item_data['username'],
+			'messages' : new Array()
+		}
 	});
 
 	$('#add-friend-request-modal').modal('hide');
